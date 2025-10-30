@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Опитування гравця</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Головна</a></li>
+            <li><a href="articles.html">Статті</a></li>
+            <li><a href="gallery.html">Галерея</a></li>
+            <li><a href="form.html">Опитування</a></li>
+            <li><a href="about.html">Про нас</a></li>
+            <li><a href="contacts.html">Контакти</a></li>
+        </ul>
+    </nav>
+    
+    <form action="/submit" method="post">
+        <fieldset>
+            <legend>Особиста інформація</legend>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password">
+        </fieldset>
+
+        <fieldset>
+            <legend>Ігрові вподобання</legend>
+            <label>Улюблена роль:</label>
+            <select name="role">
+                <option value="top">Топ</option>
+                <option value="jungle">Ліс</option>
+                <option value="mid">Мід</option>
+                <option value="adc">Фізичний кері</option>
+                <option value="support">Підтримка</option>
+            </select>
+
+            <label>Ранг:</label>
+            <input type="text" list="ranks">
+            <datalist id="ranks">
+                <option value="Iron"></option>
+                <option value="Bronze">
+                <option value="Silver">
+                <option value="Gold">
+                <option value="Platinum">
+                <option value="Emerald">
+                <option value="Diamond">
+                <option value="Master">
+                <option value="Grandmaster">
+                <option value="Challenger">
+            </datalist>
+        </fieldset>
+
+        <fieldset>
+            <legend>Додатково</legend>
+            <textarea name="comments" rows="4" placeholder="Ваші пропозиції..."></textarea>
+            
+            <label>
+                <input type="checkbox" name="newsletter"> Підписатися на новини
+            </label>
+        </fieldset>
+
+        <input type="submit" value="Надіслати">
+        <input type="reset" value="Обновити">
+    </form>
+</body>
+</html>
