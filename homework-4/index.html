@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Специфічність селекторів</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p>Селектор тегу p, специфічність: 0,0,0,1</p>
+    <br>
+    <div class="class-selector">Селектор класу .class-selector, специфічність: 0,0,1,0</div>
+    <br>
+    <div id="id-selector">Селектор ID #id-selector, специфічність: 0,1,0,0</div>
+    <br>
+    <input type="text" data-selector="input" placeholder="Селектор атрибута [data-custom], специфічність: 0,0,1,0">
+    <br>
+    <br>
+    <div class="parent">
+        <span>Вкладені селектори .parent span, специфічність: 0,0,1,1</span>
+    </div>
+    <br>
+    <ul class="menu">
+        <li>Дочірні селектори .menu > li, специфічність: 0,0,1,1</li>
+        <div>
+            <li>Дочірній элемент элементу div</li>
+        </div>
+    </ul>
+    <br>
+    <p class="special-text">Послідовність селекторів p.special-text, специфічність: 0,0,1,1</p>
+    <br>
+    <a href="#" class="btn" title="home" target="_blank">Комбінація a.btn[title], специфічність: 0,0,2,1</a>
+    <br>
+    <br>
+    <div class="container">
+        <div class="content">
+            <p>Комбінація .container .content p, специфічність: 0,0,2,1</p>
+        </div>
+    </div>
+    <br>
+    <button class="submit-btn">Складний селектор button.submit-btn:hover, специфічність: 0,0,2,1</button>
+    <br>    
+    <br>
+    <p class="paragraf" style="color: blue; background-color: aqua;">Стиль в самому тезі в HTML файлі має найвищий приорітет ніж те, що би він успадкував від першого тегу &lt;p&gt;: 1,0,0,0</p>
+</body>
+</html>

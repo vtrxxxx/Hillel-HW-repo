@@ -1,0 +1,77 @@
+p {
+    background-color: #ffcccc;
+    padding: 10px;
+    margin: 5px;
+}
+
+.class-selector {
+    background-color: #ccffcc;
+    padding: 10px;
+    margin: 5px;
+}
+
+#id-selector {
+    background-color: #ccccff;
+    padding: 10px;
+    margin: 5px;
+}
+
+[data-selector="input"] {
+    background-color: #ffffcc;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    width: 350px;
+}
+
+.parent span {
+    background-color: #ffccff;
+    padding: 10px;
+    margin: 5px;
+    display: inline-block;
+}
+
+.menu > li {
+    background-color: #ccffff;
+    padding: 10px;
+    margin: 5px;
+    list-style-type: none;
+}
+
+p.special-text {
+    background-color: #ffcc99;
+    padding: 10px;
+    margin: 5px;
+}
+
+a.btn[title] {
+    background-color: #99ccff;
+    padding: 10px;
+    margin: 5px;
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+}
+
+.container .content p {
+    background-color: #cc99ff;
+    padding: 10px;
+    margin: 5px;
+}
+
+button.submit-btn:hover {
+    background-color: #99ff99;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+}
+
+div, p, span, li, a, button, input {
+    border-radius: 5px;
+}
