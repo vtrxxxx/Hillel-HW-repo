@@ -1,0 +1,60 @@
+body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+        
+        .mondrian-table {
+            border-collapse: collapse;
+            background-color: white;
+            border: 8px solid black;
+
+            
+        }
+        
+        .mondrian-table td {
+            border: 8px solid black;
+            padding: 0px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .mondrian-table col{
+            
+            width: 100px;
+        }
+
+        .mondrian-table tr{
+           height: 100px;
+        }
+        
+        col:nth-child(8) {width: 25px;}
+        .mondrian-table .row-group-8 { height: 50px; }
+
+        .mondrian-table .row-group-9 { height: 50px; }
+
+        
+        .red {
+            background-color: #e21836;
+        }
+        
+        .blue {
+            background-color: #0038a8;
+        }
+        
+        .yellow {
+            background-color: #ffd700;
+        }
+        
+        .white {
+            background-color: white;
+        }
+        
+        .black {
+            background-color: black;
+            color: #f5f5f5;
+        }
