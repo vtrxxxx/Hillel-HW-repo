@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/positioning.css">
+    <title>Позиціонування</title>
+</head>
+<body>
+    <nav>
+        <a href="../index.html">← На головну</a>
+    </nav>
+
+    <h1>Експерименти з позиціонуванням</h1>
+    
+    <div class="fixed">position: fixed<br>(завжди на екрані)</div>
+
+    <div class="container">
+        <h2>Static, Relative та Absolute позиціонування</h2>
+        <div class="box static">Static</div>
+        <div class="box relative">Relative<br>top: 20px<br>left: 50px</div>
+        <div class="box absolute">Absolute<br>top: 50px<br>right: 50px</div>
+        <p>Static - нормальний потік. Relative - зміщений відносно себе. Absolute - відносно батьківського контейнера з position: relative.</p>
+    </div>
+
+    <div class="sticky">position: sticky (прилипає при прокрутці)</div>
+    
+    <div class="spacer">
+        <h2>Прокрутіть сторінку, щоб побачити різницю між fixed та sticky</h2>
+        <p>Fixed - завжди залишається на тому самому місці екрана.</p>
+        <p>Sticky - поводиться як relative, доки не досягне заданої позиції, потім "прилипає" як fixed.</p>
+        <p>Продовжуйте прокручувати...</p>
+        <p>...</p>
+        <p>...</p>
+        <p>...</p>
+        <p>...</p>
+        <p>...</p>
+        <p>...</p>
+        <p>...</p>
+        <p>...</p>
+        <p>...</p>
+    </div>
+</body>
+</html>

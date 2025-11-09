@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/overflow.css">
+    <title>Overflow</title>
+</head>
+<body>
+    <nav>
+        <a href="../index.html">← На головну</a>
+    </nav>
+
+    <h1>Експерименти з Overflow</h1>
+    
+    <div class="container visible">
+        <h3>overflow: visible</h3>
+        <div class="content">
+            Цей контент перевищує розміри контейнера. Він буде видимий за межами контейнера. 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </div>
+    </div>
+
+    <div class="container hidden">
+        <h3>overflow: hidden</h3>
+        <div class="content">
+            Цей контент перевищує розміри контейнера. Частина контенту буде обрізана і прихована.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </div>
+    </div>
+
+    <div class="container scroll">
+        <h3>overflow: scroll</h3>
+        <div class="content">
+            Цей контент перевищує розміри контейнера. З'являться смуги прокрутки для перегляду всього контенту.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </div>
+    </div>
+
+    <div class="container auto">
+        <h3>overflow: auto</h3>
+        <div class="content">
+            Цей контент перевищує розміри контейнера. Смуги прокрутки з'являться автоматично, якщо контент не вміщається.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </div>
+    </div>
+</body>
+</html>

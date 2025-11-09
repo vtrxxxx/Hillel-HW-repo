@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/display.css">
+    <title>Властивість Display</title>
+</head>
+<body>
+    <nav>
+        <a href="../index.html">← На головну</a>
+    </nav>
+
+    <h1>Експерименти з display та box-sizing</h1>
+    
+    <div class="container">
+        <h2>Display: block</h2>
+        <div class="item block-item">Блок 1</div>
+        <div class="item block-item">Блок 2</div>
+        <div class="item block-item">Блок 3</div>
+    </div>
+
+    <div class="container">
+        <h2>Display: inline</h2>
+        <span class="item inline-item">Інлайн 1</span>
+        <span class="item inline-item">Інлайн 2</span>
+        <span class="item inline-item">Інлайн 3</span>
+    </div>
+
+    <div class="container">
+        <h2>Display: inline-block</h2>
+        <div class="item inline-block-item">Інлайн-блок 1</div>
+        <div class="item inline-block-item">Інлайн-блок 2</div>
+        <div class="item inline-block-item">Інлайн-блок 3</div>
+    </div>
+
+    <div class="container">
+        <h2>Display: flex</h2>
+        <div class="flex-container">
+            <div class="item">Flex елемент 1</div>
+            <div class="item">Flex елемент 2</div>
+            <div class="item">Flex елемент 3</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Box-sizing: content-box (за замовчуванням)</h2>
+        <div class="box-sizing-demo content-box">
+            width: 200px + padding: 20px + border: 5px = 250px
+        </div>
+        
+        <h2>Box-sizing: border-box</h2>
+        <div class="box-sizing-demo border-box">
+            width: 200px (включає padding та border)
+        </div>
+    </div>
+</body>
+</html>

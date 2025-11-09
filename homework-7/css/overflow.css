@@ -1,0 +1,34 @@
+ .container {
+     width: 300px;
+     height: 150px;
+     border: 2px solid #333;
+     margin: 20px;
+     padding: 10px;
+     display: inline-block;
+     vertical-align: top;
+ }
+
+ .visible {
+     overflow: visible;
+     background-color: #ffe6e6;
+ }
+
+ .hidden {
+     overflow: hidden;
+     background-color: #e6ffe6;
+ }
+
+ .scroll {
+     overflow: scroll;
+     background-color: #e6e6ff;
+ }
+
+ .auto {
+     overflow: auto;
+     background-color: #ffffe6;
+ }
+
+ .content {
+     width: 400px;
+     height: 200px;
+ }

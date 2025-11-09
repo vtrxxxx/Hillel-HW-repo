@@ -1,0 +1,39 @@
+ .container {
+     border: 2px solid #333;
+     padding: 10px;
+     margin: 20px 0;
+ }
+
+ .float-left {
+     float: left;
+     width: 100px;
+     height: 100px;
+     background-color: lightblue;
+     margin: 10px;
+     padding: 10px;
+ }
+
+ .float-right {
+     float: right;
+     width: 100px;
+     height: 100px;
+     background-color: lightcoral;
+     margin: 10px;
+     padding: 10px;
+ }
+
+ .clear-left {
+     clear: left;
+ }
+
+ .clear-right {
+     clear: right;
+ }
+
+ .clear-both {
+     clear: both;
+ }
+
+ .text-content {
+     background-color: lightyellow;
+ }
