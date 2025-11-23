@@ -60,6 +60,10 @@
     }
 }
 
+.menu-botton{
+    display: none;
+}
+
 .page-tittle {
     padding-top: 83px;
     padding-bottom: 60px;
@@ -74,6 +78,7 @@
     color: var(--color-gray);
     width: 540px;
     padding-bottom: 65px;
+    line-height: 164%;
 }
 
 .write-me {
@@ -104,15 +109,17 @@ section.about-me {
             color: black;
         }
 
-        .about-text {
-            font-family: var(--font);
-            font-size: var(--base-font-size);
-            max-width: 540px;
-            margin: 0 auto;
-            line-height: 164%;
-            color: var(--color-gray);
-        }
+
     }
+}
+
+.about-text {
+    font-family: var(--font);
+    font-size: var(--base-font-size);
+    max-width: 540px;
+    margin: 0 auto;
+    line-height: 164%;
+    color: var(--color-gray);
 }
 
 section.projects {
@@ -156,16 +163,6 @@ section.how-i-work {
             color: black;
         }
 
-        .work-text {
-            font-family: var(--font);
-            font-size: var(--base-font-size);
-            max-width: 540px;
-            margin: 0 auto;
-            line-height: 164%;
-            color: var(--color-gray);
-            padding-block-end: 57px;
-        }
-
         .working-video {
             width: 100%;
             aspect-ratio: 16 / 9;
@@ -173,17 +170,168 @@ section.how-i-work {
     }
 }
 
-.footer{
+.work-text {
+    font-family: var(--font);
+    font-size: var(--base-font-size);
+    max-width: 540px;
+    margin: 0 auto;
+    line-height: 164%;
+    color: var(--color-gray);
+    padding-block-end: 57px;
+}
+
+.footer {
     padding-block: 50px;
     color: white;
-    
 
-    .author{
+
+    .author {
         font-size: 21px;
         padding-bottom: 20px;
     }
 
-    .copyright{
+    .copyright {
         font-size: 13px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .menu {
+        gap: 30px;
+    }
+
+    .welcome-text {
+        width: 100%;
+        max-width: 540px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .navigation {
+        padding-block: 40px;
+        
+    }
+
+    .menu {
+        gap: 15px;
+    }
+
+    .menu li a {
+        font-size: 14px;
+
+    }
+
+
+    .page-tittle {
+        padding-top: 40px;
+        padding-bottom: 30px;
+    }
+
+    .page-tittle h1 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .welcome-text,
+    .about-text,
+    .work-text {
+        max-width: 100%;
+        font-size: 14px;
+        text-align: center;
+        padding-bottom: 30px;
+    }
+
+    .write-me {
+        width: 100%;
+        max-width: 225px;
+        display: block;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    section.about-me .container {
+        padding-block: 60px;
+    }
+
+    section.about-me h2 {
+        font-size: 24px;
+        padding-bottom: 30px;
+    }
+
+    section.projects {
+        padding-block: 60px;
+    }
+
+    .my-projects {
+        gap: 30px;
+        justify-content: space-around;
+    }
+
+    .my-projects li {
+        width: 120px;
+        font-size: 14px;
+        background-size: 40px;
+        padding-left: 50px;
+    }
+
+    .my-projects li span {
+        font-size: 18px;
+    }
+
+    section.how-i-work .container {
+        padding-block: 60px;
+    }
+
+    section.how-i-work h2 {
+        font-size: 24px;
+        padding-bottom: 30px;
+    }
+
+    .footer {
+        padding-block: 30px;
+        text-align: center;
+    }
+
+    .footer .author {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .menu {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .my-projects {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .menu-botton{
+        display: inline;
+        background-color: #EEEFF1;
+        border: none;
+    }
+
+
+    .page-tittle h1 {
+        font-size: 28px;
     }
 }
