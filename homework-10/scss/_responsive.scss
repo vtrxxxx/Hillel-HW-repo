@@ -1,0 +1,48 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+// Специфические медиа-запросы которые не вошли в другие модули
+
+@include m.tablet {
+    .navigation {
+        .menu {
+            gap: v.$spacing-md;
+        }
+    }
+}
+
+@include m.mobile {
+    .navigation {
+        padding-block: v.$spacing-lg;
+        
+        .menu {
+            gap: v.$spacing-xs;
+            
+            li {
+                a {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    
+    .page-tittle {
+        padding-top: v.$spacing-lg;
+        padding-bottom: v.$spacing-md;
+    }
+}
+
+@include m.small-mobile {
+    .navigation {
+        // Показываем кнопку меню
+        .menu-botton {
+            display: inline;
+        }
+        
+        // Скрываем обычное меню
+        .menu {
+            display: none;
+        }
+        
+    }
+}

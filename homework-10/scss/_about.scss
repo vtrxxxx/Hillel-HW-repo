@@ -1,0 +1,38 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+section.about-me {
+    background-color: v.$background-gray;
+
+    .container {
+        @include m.section-padding;
+        text-align: center;
+
+        h2 {
+            font-family: v.$font-primary;
+            font-size: 32px;
+            padding-bottom: v.$spacing-xl;
+            color: v.$color-dark;
+
+            @include m.mobile {
+                font-size: 24px;
+                padding-bottom: v.$spacing-md;
+            }
+        }
+    }
+}
+
+.about-text {
+    font-family: v.$font-primary;
+    font-size: v.$base-font-size;
+    max-width: 540px;
+    margin: 0 auto;
+    line-height: 164%;
+    color: v.$color-gray;
+
+    @include m.mobile {
+        max-width: 100%;
+        font-size: 14px;
+        text-align: center;
+    }
+}

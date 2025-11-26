@@ -1,0 +1,36 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/Roboto-VariableFont_wdth\,wght.ttf") format("truetype");
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: v.$font-primary;
+}
+
+body {
+    font-family: v.$font-primary;
+    font-size: v.$base-font-size;
+    line-height: 1.6;
+    color: v.$color-dark;
+}
+
+.container {
+    @include m.container
+}
+
+.primary-back-middle {
+    background-color: v.$background-light;
+    padding-bottom: v.$header-padding-bottom;
+}
+
+.dark-blue {
+    background-color: v.$color-blue;
+}

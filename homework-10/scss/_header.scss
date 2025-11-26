@@ -1,0 +1,115 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+header {
+    &.primary-back-middle {
+
+        // Навигация
+        .navigation {
+            padding-block: v.$spacing-xxxl;
+            letter-spacing: 2px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+
+
+
+        }
+
+
+
+        // Остальные стили остаются без изменений...
+        .page-tittle {
+            padding-top: v.$spacing-xxxl;
+            padding-bottom: v.$spacing-xxl;
+
+            h1 {
+                font-size: 48px;
+
+                @include m.mobile {
+                    font-size: 32px;
+                    text-align: center;
+                }
+
+                @include m.small-mobile {
+                    font-size: 28px;
+                }
+            }
+        }
+
+        .welcome-text {
+            font-size: v.$base-font-size;
+            color: v.$color-gray;
+            width: 540px;
+            padding-bottom: 65px;
+            line-height: 164%;
+
+            @include m.tablet {
+                width: 100%;
+                max-width: 540px;
+            }
+
+            @include m.mobile {
+                max-width: 100%;
+                font-size: 14px;
+                text-align: center;
+                padding-bottom: v.$spacing-md;
+            }
+        }
+
+        .write-me {
+            @include m.button-base;
+            width: 225px;
+            height: 65px;
+
+            @include m.mobile {
+                width: 100%;
+                max-width: 225px;
+                display: block;
+                margin: 0 auto;
+                padding: v.$spacing-sm;
+            }
+        }
+    }
+
+    .menu {
+        display: flex;
+        justify-items: center;
+        gap: v.$spacing-xl;
+
+        li {
+            list-style: none;
+
+            a {
+                text-decoration: none;
+                font-size: v.$base-font-size;
+                text-transform: uppercase;
+                color: v.$color-dark;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: v.$color-blue;
+                }
+            }
+        }
+    }
+
+    .menu-botton {
+        display: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+
+        img {
+            width: 24px;
+            height: 24px;
+            display: block;
+        }
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}

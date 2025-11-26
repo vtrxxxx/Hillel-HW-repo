@@ -1,0 +1,19 @@
+{
+  "name": "homework-9",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass:watch": "sass scss/main.scss css/style.css --watch",
+    "sass:build": "sass scss/main.scss css/style.css --style=compressed",
+    "sass:compile": "sass scss/main.scss css/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "sass": "^1.94.2"
+  }
+}

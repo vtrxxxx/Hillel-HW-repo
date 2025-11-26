@@ -1,0 +1,25 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.footer {
+    padding-block: v.$spacing-xl;
+    color: v.$color-white;
+    text-align: center;
+
+    @include m.mobile {
+        padding-block: v.$spacing-md;
+    }
+
+    .author {
+        font-size: 21px;
+        padding-bottom: v.$spacing-sm;
+
+        @include m.mobile{
+            font-size: 18px;
+        }
+    }
+
+    .copyright {
+        font-size: 13px;
+    }
+}

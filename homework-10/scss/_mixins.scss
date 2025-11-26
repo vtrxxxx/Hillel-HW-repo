@@ -1,0 +1,69 @@
+@use 'variables' as v;
+
+@mixin tablet {
+    @media (max-width: #{v.$breakpoint-tablet}) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: #{v.$breakpoint-mobile}) {
+        @content;
+    }
+}
+
+@mixin button-base {
+    background-color: v.$color-blue;
+    font-size: v.$base-font-size;
+    // и т.д.
+}
+
+@mixin small-mobile {
+    @media (max-width: #{v.$breakpoint-small-mobile}) {
+        @content;
+    }
+}
+
+@mixin container {
+    max-width: v.$container-max-width;  // ← Используй v. префикс
+    margin: 0 auto;
+    padding: 0 v.$spacing-sm;
+    
+    @include mobile {
+        padding: 0 v.$spacing-xs;
+    }
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin button-base {
+    padding: 25px 41px 17px;
+    background-color: v.$color-blue;
+    font-family: v.$font-primary;
+    font-size: v.$base-font-size;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: v.$color-white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    &:hover {
+        background-color: darken(v.$color-blue, 10%);
+        transform: translateY(-2px);
+    }
+}
+
+// Миксин для секций
+@mixin section-padding {
+    padding-block: v.$spacing-huge;
+    
+    @include mobile {
+        padding-block: v.$spacing-xxl;
+    }
+}
