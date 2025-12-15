@@ -1,1 +1,52 @@
 @import "tailwindcss";
+
+@theme {
+  --background-image-header-logo: url('../img/logo.svg');
+  --color-dark-grey: #403E3B;
+  --color-light-gray: #645C55;   
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@layer base {
+  body {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  .text-basic {
+    @apply text-sm sm:text-base leading-relaxed;
+  }
+  
+  .text-basic-title {
+    @apply text-xs sm:text-sm uppercase tracking-widest;
+  }
+}
+
+@layer utilities {
+  .aspect-square {
+    aspect-ratio: 1 / 1;
+  }
+  
+  .transition-all-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .bg-blend-multiply {
+    background-blend-mode: multiply;
+  }
+}

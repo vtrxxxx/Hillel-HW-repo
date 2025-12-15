@@ -1,12 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="src/output.css">
+    <title>TailWind-Site</title>
+    <link rel="stylesheet" href="assets/css/output.css">
 </head>
-<body>
-    
+
+<body class="overflow-x-hidden">
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+        <div
+            class="flex flex-col lg:flex-row justify-between lg:mx-auto items-center lg:items-start w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-4 lg:py-0 lg:h-22.5">
+            <div class="w-48 lg:w-55 h-12 lg:h-4.75 bg-header-logo bg-contain bg-no-repeat lg:mt-9"></div>
+
+            <nav class="mt-4 lg:mt-9">
+                <ul class="flex flex-wrap justify-center gap-4 sm:gap-6 lg:gap-8 text-sm lg:text-[15px] leading-6">
+                    <li><a href="#" class="hover:text-gray-600 transition-colors">Projects</a></li>
+                    <li><a href="#" class="hover:text-gray-600 transition-colors">About</a></li>
+                    <li><a href="#" class="hover:text-gray-600 transition-colors">News</a></li>
+                    <li><a href="#" class="hover:text-gray-600 transition-colors">Team</a></li>
+                    <li><a href="#" class="hover:text-gray-600 transition-colors">Contact</a></li>
+                    <li><a href="#"
+                            class="bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition-colors text-sm">Get
+                            template</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="introduce" class="bg-gray-50">
+            <div class="flex flex-col lg:flex-row max-w-7xl mx-auto">
+                <div class="w-full lg:w-1/2 bg-[#ECE7E4] px-6 sm:px-8 lg:px-0">
+                    <div class="max-w-lg mx-auto lg:mx-0 lg:ml-4 xl:ml-25 py-12 lg:py-0 lg:pt-34.25">
+                        <p class="text-light-gray text-xs sm:text-sm uppercase tracking-wider">Wishbone+Partners</p>
+                        <h1
+                            class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[64px] text-[#1B1A1A] leading-tight sm:leading-snug lg:leading-[70.4px] mt-4 lg:mt-5">
+                            The home of beautiful architecture.
+                        </h1>
+                        <p class="text-dark-grey text-sm sm:text-base mt-4 sm:mt-4.5 max-w-xl">
+                            We are an architecture firm with a focus on beautiful but functional design. At its heart,
+                            we believe design is about usability and accessibility — these are the guiding principles
+                            for our work. Read more about our previous projects, our process and our team below.
+                        </p>
+                        <button
+                            class="w-full sm:w-auto h-11.5 text-[#1B1A1A] text-sm sm:text-base tracking-wide hover:bg-gray-50 px-6 sm:px-8 mt-6 sm:mt-7.5 cursor-pointer transition-colors">
+                            Read more
+                        </button>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full lg:w-1/2 aspect-square bg-[url('../img/garden.svg')] bg-cover bg-center min-h-75 sm:min-h-100 lg:min-h-0">
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-12 sm:py-16 lg:py-25">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6">
+                <div class="flex flex-col lg:flex-row lg:justify-between gap-8 lg:gap-12 lg:max-w-3xl">
+                    <h2 class="text-2xl sm:text-3xl lg:text-[30px] text-dark-grey shrink-0">Our firm</h2>
+                    <div class="space-y-6 lg:max-w-123.25">
+                        <p class="text-dark-grey text-sm sm:text-base leading-relaxed">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros
+                            elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
+                            commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem
+                            imperdiet. Nunc ut sem vitae risus tristique posuere.
+                        </p>
+                        <p class="text-dark-grey text-sm sm:text-base leading-relaxed">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros
+                            elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
+                            commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem
+                            imperdiet. Nunc ut sem vitae risus tristique posuere.
+                        </p>
+                        <p class="text-dark-grey text-sm sm:text-base leading-relaxed">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros
+                            elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
+                            commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem
+                            imperdiet. Nunc ut sem vitae risus tristique posuere.
+                        </p>
+                        <div class="flex items-center gap-4 mt-8">
+                            <img class="w-16 sm:w-21 h-16 sm:h-21 rounded-full" src="assets/img/avatar.svg"
+                                alt="Stephen Collier">
+                            <div>
+                                <h4 class="text-base sm:text-[17px] font-medium">Stephen Collier</h4>
+                                <p class="text-light-gray text-sm">Senior Partner</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="relative h-75 sm:h-100 md:h-125 lg:h-150 bg-[url('../img/balcony.svg')] bg-cover bg-center">
+            <div class="absolute bottom-6 right-0 sm:bottom-12 lg:bottom-66.5 m-4 sm:m-3 max-w-xs sm:max-w-71.25">
+                <p class="text-xs sm:text-sm uppercase tracking-widest text-dark-grey">Reeding House</p>
+                <p class="text-light-gray text-sm sm:text-base mt-2">Lorem ipsum dolor sit amet, dolor sit amet dolor
+                    sit amet.</p>
+            </div>
+        </section>
+
+        <section class="py-12 sm:py-16 lg:py-24">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <p class="text-xs sm:text-sm uppercase tracking-widest text-dark-grey mb-3">Our process</p>
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-[39px] text-[#1B1A1A]">How we do what we do.
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 mt-8 sm:mt-12">
+                    <div class="text-center">
+                        <img class="w-16 sm:w-20 lg:w-29.25 mx-auto mb-4" src="assets/img/sketching.svg"
+                            alt="Sketching">
+                        <h3 class="text-lg sm:text-xl text-dark-grey mb-2">Sketching</h3>
+                        <p class="text-light-gray text-sm sm:text-base">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut tristique libero.
+                        </p>
+                    </div>
+
+                    <div class="text-center">
+                        <img class="w-16 sm:w-20 lg:w-29.25 mx-auto mb-4" src="assets/img/finalizing.svg"
+                            alt="Finalizing">
+                        <h3 class="text-lg sm:text-xl text-dark-grey mb-2">Finalizing</h3>
+                        <p class="text-light-gray text-sm sm:text-base">
+                            Adipiscing elit. Nulla ut tristique libero. Nulla vitae tempor leo iaculis.
+                        </p>
+                    </div>
+
+                    <div class="text-center">
+                        <img class="w-16 sm:w-20 lg:w-29.25 mx-auto mb-4" src="assets/img/building.svg" alt="Building">
+                        <h3 class="text-lg sm:text-xl text-dark-grey mb-2">Building</h3>
+                        <p class="text-light-gray text-sm sm:text-base">
+                            Nulla ut tristique libero. Lorem ipsum ut tristique libero.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="relative h-75 sm:h-100 md:h-125 lg:h-150 bg-[url('../img/stairs.svg')] bg-cover bg-center">
+            <div class="absolute bottom-6 right-0 sm:bottom-12 lg:bottom-66.5 m-4 sm:m-3 max-w-xs sm:max-w-71.25">
+                <p class="text-xs sm:text-sm uppercase tracking-widest text-dark-grey">The marble staircase</p>
+                <p class="text-light-gray text-sm sm:text-base mt-2">Lorem ipsum dolor sit amet, dolor sit amet dolor
+                    sit amet.</p>
+            </div>
+        </section>
+
+        <section class="bg-dark-grey py-12 sm:py-16 lg:py-24">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col lg:flex-row gap-8 lg:gap-16">
+                    <div class="lg:w-1/2">
+                        <p class="text-xs sm:text-sm uppercase tracking-widest text-[#ECE7E4]">prior clients</p>
+                        <h2 class="text-2xl sm:text-3xl lg:text-[32px] text-white mt-2">Happy customers.</h2>
+                        <p class="text-[#ECE7E4] text-sm sm:text-base mt-4">
+                            Morbi neque ex, condimentum dapibus congue et, vulputate ut ligula. Vestibulum sit amet urna
+                            turpis. Mauris euismod elit et nisi ultrices.
+                        </p>
+                    </div>
+
+                    <div class="lg:w-1/2 grid grid-cols-2 gap-8 sm:gap-12 lg:gap-24 items-center">
+                        <img class="h-6 sm:h-7.5 mx-auto" src="assets/img/customer1.svg" alt="Customer 1">
+                        <img class="h-10 sm:h-12 lg:h-19.5 mx-auto" src="assets/img/customer2.svg" alt="Customer 2">
+                        <img class="h-4 sm:h-5 mx-auto" src="assets/img/customer3.svg" alt="Customer 3">
+                        <img class="h-7 sm:h-9 mx-auto" src="assets/img/customer4.svg" alt="Customer 4">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section
+            class="relative h-75 sm:h-100 md:h-125 lg:h-150 bg-[url('../img/twisted-stairs.svg')] bg-cover bg-center">
+            <div class="absolute bottom-6 left-0 sm:bottom-12 lg:bottom-66.5 m-5 sm:m-7 max-w-xs sm:max-w-71.25">
+                <p class="text-xs sm:text-sm uppercase tracking-widest text-dark-grey">The swirling staircase</p>
+                <p class="text-light-gray text-sm sm:text-base mt-2">Lorem ipsum dolor sit amet, dolor sit amet dolor
+                    sit amet.</p>
+            </div>
+        </section>
+
+        <section class="py-12 sm:py-16 lg:py-24">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col lg:flex-row gap-8 lg:gap-16">
+                    <div class="lg:w-2/5">
+                        <h2 class="text-2xl sm:text-3xl lg:text-[32px] text-dark-grey">Meet our team</h2>
+                        <p class="text-light-gray text-sm sm:text-base mt-4 mb-8">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros
+                            elementum tristique.
+                        </p>
+                        <button
+                            class="text-sm sm:text-base text-[#1B1A1A] hover:bg-gray-50 px-6 py-3 cursor-pointer transition-colors">
+                            See team
+                        </button>
+                    </div>
+
+                    <div class="lg:w-3/5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                        <div class="flex items-center gap-4">
+                            <img class="w-12 sm:w-16 lg:w-21 h-12 sm:h-16 lg:h-21 rounded-full"
+                                src="assets/img/avatar.svg" alt="Team Member">
+                            <div>
+                                <h4 class="text-base sm:text-lg font-medium">Stephen Collier</h4>
+                                <p class="text-light-gray text-sm">Senior Partner</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <img class="w-12 sm:w-16 lg:w-21 h-12 sm:h-16 lg:h-21 rounded-full"
+                                src="assets/img/avatar.svg" alt="Team Member">
+                            <div>
+                                <h4 class="text-base sm:text-lg font-medium">Stephen Collier</h4>
+                                <p class="text-light-gray text-sm">Senior Partner</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <img class="w-12 sm:w-16 lg:w-21 h-12 sm:h-16 lg:h-21 rounded-full"
+                                src="assets/img/avatar.svg" alt="Team Member">
+                            <div>
+                                <h4 class="text-base sm:text-lg font-medium">Stephen Collier</h4>
+                                <p class="text-light-gray text-sm">Senior Partner</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <img class="w-12 sm:w-16 lg:w-21 h-12 sm:h-16 lg:h-21 rounded-full"
+                                src="assets/img/avatar.svg" alt="Team Member">
+                            <div>
+                                <h4 class="text-base sm:text-lg font-medium">Stephen Collier</h4>
+                                <p class="text-light-gray text-sm">Senior Partner</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <img class="w-12 sm:w-16 lg:w-21 h-12 sm:h-16 lg:h-21 rounded-full"
+                                src="assets/img/avatar.svg" alt="Team Member">
+                            <div>
+                                <h4 class="text-base sm:text-lg font-medium">Stephen Collier</h4>
+                                <p class="text-light-gray text-sm">Senior Partner</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#CEC4BC] py-8 sm:py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8">
+                <div>
+                    <img class="w-32 sm:w-40 mb-4" src="assets/img/logo.svg" alt="Logo">
+                    <p class="text-light-gray text-sm sm:text-base">Powered by Webflow.</p>
+                    <p class="text-light-gray text-sm sm:text-base">All rights reserved Wishbone+Partners, Inc.
+                        Licensing.</p>
+                </div>
+
+                <div class="flex gap-4 sm:gap-6">
+                    <a href="#" class="w-6 h-6 sm:w-8 sm:h-8">
+                        <img src="assets/img/twitter.svg" alt="Twitter" class="w-full h-full">
+                    </a>
+                    <a href="#" class="w-6 h-6 sm:w-8 sm:h-8">
+                        <img src="assets/img/inst.svg" alt="Instagram" class="w-full h-full">
+                    </a>
+                    <a href="#" class="w-6 h-6 sm:w-8 sm:h-8">
+                        <img src="assets/img/facebook.svg" alt="Facebook" class="w-full h-full">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>
