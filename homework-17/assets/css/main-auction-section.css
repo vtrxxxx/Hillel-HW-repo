@@ -1,0 +1,321 @@
+.main-auction-section {
+    max-width: 1280px;
+    margin: 90px auto;
+}
+
+.auction-heading-container {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.auction-heading-h2 {
+    max-width: 265px;
+    max-height: 72px;
+    font-family: var(--font-russo-one);
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 100%;
+    letter-spacing: 0;
+    vertical-align: middle;
+    text-align: center;
+    color: black;
+}
+
+.auction-heading-live {
+    width: 135px;
+    height: 36px;
+    margin-top: 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px var(--color-custom-red);
+    border-radius: 40px;
+    gap: 5px;
+    font-family: var(--font-muller);
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--color-custom-red);
+    line-height: 100%;
+    letter-spacing: 0;
+    vertical-align: bottom;
+}
+
+.auction-heading-live::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: var(--color-custom-red);
+    border-radius: 50%;
+}
+
+.auction-lot-container {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
+
+.lot-author-container {
+    width: 228px;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    background: var(--color-light-gray);
+    border-radius: 23px;
+}
+
+.lot-author-icon{
+    width: 48px;
+    height: 48px;
+    margin-block: 11px;
+    margin-left: 16px;
+}
+
+.lot-author-name {
+    font-family: var(--font-muller);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0;
+    margin: 25px 16px;
+}
+
+.auction-lot-name {
+    margin-block: 32px;
+    font-family: var(--font-muller);
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 100%;
+    letter-spacing: 0;
+}
+
+.lot-price-endtime-container {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 32px;
+}
+
+.lot-price-container {
+    width: 296px;
+    height: 174px;
+    background: var(--color-light-gray);
+    border-radius: 40px;
+}
+
+.lot-price-bet-text {
+    max-width: 72px;
+    margin: 32px 0 16px 32px;
+    font-family: var(--font-muller);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0;
+    color: var(--color-custom-black);
+}
+
+.lot-price-eth {
+    max-width: 207px;
+    margin: 16px 0 6px 32px;
+    font-family: var(--font-muller);
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 100%;
+    letter-spacing: 0;
+    color: var(--color-custom-black);
+}
+
+.lot-price-dollar {
+    max-width: 76px;
+    margin: 6px 0 32px 32px;
+    font-family: var(--font-muller);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0;
+    color: var(--color-middle-gray);
+}
+
+.lot-endtime-container {
+    max-width: 460px;
+    width: 100%;
+    height: 174px;
+    display: flex;
+    background: var(--color-custom-black);
+    border-radius: 40px;
+}
+
+.lot-endtime-p-num-text {
+    max-width: 172px;
+    width: 100%;
+    margin: 32px 0 16px 32px;
+    font-family: var(--font-muller);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0;
+    color: white;
+}
+
+.lot-endtime-p-num-time {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 26px;
+    margin-left: 32px;
+    margin-bottom: 32px;
+}
+
+.lot-endtime-p-num-time-first {
+    width: 57px;
+    height: 74px;
+    color: white;
+}
+
+.lot-endtime-p-num-time-first-01 {
+    font-family: var(--font-muller);
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 100%;
+    letter-spacing: 0;
+    text-align: center;
+}
+
+.lot-endtime-p-num-time-first-hours {
+    margin-top: 6px;
+    font-family: var(--font-muller);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0;
+    text-align: center;
+}
+
+.lot-endtime-p-num-time-second {
+    width: 57px;
+    height: 74px;
+    color: white;
+}
+
+.lot-endtime-p-num-time-second-48 {
+    font-family: var(--font-muller);
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 100%;
+    letter-spacing: 0;
+    text-align: center;
+}
+
+.lot-endtime-p-num-time-second-min {
+    margin-top: 6px;
+    font-family: var(--font-muller);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0;
+    text-align: center;
+}
+
+.lot-endtime-p-num-time-third {
+    width: 57px;
+    height: 74px;
+    color: white;
+}
+
+.lot-endtime-p-num-time-third-47 {
+    font-family: var(--font-muller);
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 100%;
+    letter-spacing: 0;
+    text-align: center;
+}
+
+.lot-endtime-p-num-time-third-sec {
+    margin-top: 6px;
+    font-family: var(--font-muller);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0;
+    text-align: center;
+}
+
+.lot-endtime-clock {
+    width: 121px;
+    height: 121px;
+    margin: 27px 32px 26px 44px;
+}
+
+.lot-button {
+    width: 296px;
+    height: 70px;
+    border: solid 5px var(--color-aquamarine);
+    border-radius: 40px;
+    background-color: var(--color-aquamarine);
+    color: var(--color-custom-black);
+    font-family: var(--font-muller);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.lot-button:hover {
+    background-color: transparent;
+    border: solid 5px var(--color-aquamarine);
+    color: var(--color-custom-black);
+}
+
+@media(max-width: 1280px)
+{
+
+    .auction-heading-container{         
+        margin-inline-start: var(--margin-50);
+    } 
+    .lot-info-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .lot-price-endtime-container{
+        flex-direction: column;
+ 
+    }
+    .lot-icon{
+        max-height: 460px;
+    }
+    .auction-heading-container{
+        margin-inline-start: 160px;
+    
+    }
+    .auction-lot-container{
+        justify-content: center;
+    }
+}
+
+@media(max-width: 1024px){
+    .auction-heading-container{
+        margin-inline-start: 36px;
+    }
+
+}
+
+@media(max-width: 768px){
+    .auction-lot-container{
+        flex-direction: column;
+    }
+
+    .lot-info-container{
+        align-items: center;
+    }
+    .lot-price-endtime-container{
+       align-items: center;
+    }
+
+}
+    
+
+

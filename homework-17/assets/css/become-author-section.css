@@ -1,0 +1,200 @@
+.become-author-section {
+    max-width: 1280px;
+    height: 556px;
+    margin: 90px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 32px;
+    padding: 0 20px;
+    
+    grid-template-areas:
+        "text form"
+        "sticker form";
+}
+
+.become-author-text {
+    grid-area: text;
+    align-self: end; 
+    max-width: 624px;
+}
+.become-author-form {
+    grid-area: form;
+}
+
+.become-author-text-sticker {
+    grid-area: sticker;
+    background-image: url('/assets/img/become-author/become-author-hands-sticker.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.become-author-text-heading {
+    margin-bottom: 16px;
+    font-family: var(--font-russo-one);
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 100%;
+    letter-spacing: 0;
+    vertical-align: middle;
+    color: var(--custom-color-black);
+}
+
+.become-author-text-p1 {
+    margin-bottom: 16px;
+    font-family: var(--font-russo-one);
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0;
+    vertical-align: middle;
+    color: var(--custom-color-black);
+}
+
+.become-author-text-p2 {
+    margin-bottom: 32px;
+    font-family: var(--font-size);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0;
+    color: var(--custom-color-black);
+    text-align: justify;
+}
+
+.become-author-text-p2-span {
+    font-family: var(--font-muller);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0;
+    color: var(--custom-color-black);
+}
+
+.become-author-form-attach-works {
+    max-width: 624px;
+    height: 342px;
+    padding: 98px 156px;
+    border: none;
+    border-radius: 40px;
+    background-color: var(--color-light-gray);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.become-author-form-nickname {
+    max-width: 624px;
+    width: 100%;
+    height: 70px;
+    margin-block: 32px;
+    background-color: var(--color-light-gray);
+    border-radius: 40px;
+    border: none;
+    padding-block: 25px;
+    padding-left: 32px;
+    font-family: var(--font-muller);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0;
+    vertical-align: middle;
+    color: var(--color-dark-gray);
+}
+
+.become-author-form-submit {
+    width: 296px;
+    height: 70px;
+    border: 5px solid var(--color-aquamarine);
+    background-color: var(--color-aquamarine);
+    border-radius: 40px;
+    cursor: pointer;
+    font-family: var(--font-muller);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0;
+    color: var(--custom-color-black);
+    transition: background-color 0.3s ease;
+}
+
+.become-author-form-submit:hover {
+    background-color: white;
+}
+.become-author-form-attach-works-botton{
+    border: none;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+@media(max-width: 1280px){
+    .become-author-text {
+        p{
+            padding-left: 25px;
+        }
+        h2{
+            padding-left: 25px;
+        }
+        
+    }
+    .become-author-text-sticker{
+        max-width: 550px;
+        margin-inline-start: 30px;
+    }
+    .become-author-form{
+        max-width: 600px;
+        margin-inline: auto;
+    }
+
+}
+
+@media (max-width: 1024px) {
+    .become-author-section {
+        flex-direction: column;
+        gap: 30px;
+        height: auto;
+    }
+    
+    .become-author-section {
+        display: grid;
+        grid-template-columns: 0.5fr 1fr;
+        grid-template-rows: auto 1fr;
+        gap: 30px;
+    }
+    
+    .become-author-text {
+        grid-column: 1 / -1; 
+        grid-row: 1;
+        max-width: 800px;
+    }
+    
+    .become-author-text-sticker {
+        grid-column: 1;
+        grid-row: 2;
+        margin-top: 0;
+        align-self: start;
+    }
+    
+    .become-author-form {
+        grid-column: 2;
+        grid-row: 2;
+        align-self: start;
+    }
+    .become-author-text-sticker {
+        height: 547px;
+        grid-area: sticker;
+        background-image: url('/assets/img/become-author/become-author-hands-sticker-1024.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}

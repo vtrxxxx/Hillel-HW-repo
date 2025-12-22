@@ -1,0 +1,105 @@
+.newsletter-form-section {
+    width: 100%;
+    height: 391px;
+    background-color: var(--color-custom-red);
+}
+
+.newsletter-form-container {
+    width: 1280px;
+    display: flex;
+    flex-direction: row;
+    margin-inline: auto;
+}
+
+.newsletter-form-section-form-container {
+    max-width: 492px;
+    display: flex;
+    flex-direction: column;
+}
+
+.newsletter-form-section-form-heading {
+    max-width: 500px;
+    font-family: var(--font-russo-one);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: white;
+    padding-top: 32px;
+}
+
+.newsletter-form-section-form-input {
+    width: 460px;
+    height: 70px;
+    background-color: var(--color-custom-black);
+    padding-block: 25px;
+    padding-left: 32px;
+    border: none;
+    border-radius: 40px;
+}
+
+.newsletter-form-section-form-input.name {
+    margin-top: 32px;
+}
+
+.newsletter-form-section-form-input.email {
+    margin-block: 16px;
+}
+
+.newsletter-form-section-form-submit {
+    width: 296px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-aquamarine);
+    border: solid 5px var(--color-aquamarine);
+    border-radius: 40px;
+    font-family: var(--font-muller);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: var(--color-custom-black);
+    margin-bottom: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-form-section-form-submit:hover {
+    background-color: var(--color-custom-red);
+}
+
+.newsletter-form-section-form-checkbox {
+    width: 14px;
+    height: 14px;
+    padding-top: 1px;
+    margin-right: 8px;
+}
+
+.newsletter-form-section-form-checkbox-label {
+    height: 13px;
+    font-family: var(--font-muller);
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0;
+    color: white;
+    text-align: start;
+}
+
+.newsletter-form-section-sticker {
+    max-width: 788px;
+    height: 391px;
+}
+
+@media (max-width: 1280px){
+
+    .newsletter-form-section-sticker{
+        width: 50%;
+    }
+
+    .newsletter-form-container{
+        justify-content: center;
+    }
+}

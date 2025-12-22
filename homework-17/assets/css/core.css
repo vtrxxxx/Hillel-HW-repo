@@ -1,0 +1,33 @@
+:root{
+    --font-muller: 'Muller', sans-serif;
+    --font-russo-one: 'Russo One', sans-serif;
+    --linear-gradient-green: linear-gradient(180deg,rgba(70, 244, 219, 1) 0%, rgba(87, 210, 114, 1) 100%);
+    --color-custom-black: #07060B;
+    --color-custom-red: #D13130;
+    --color-aquamarine: #46f4db;
+    --color-light-gray: #EDEDF2;
+    --color-middle-gray: #95959D;
+    --color-dark-gray: #717178;
+    --color-deep-gray: #37373E;
+    --margin-50: 50px;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: url("assets/fonts/Muller-font-regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Russo One';
+    src: url("assets/fonts/RussoOne-font-regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
