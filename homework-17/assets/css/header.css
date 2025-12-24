@@ -116,7 +116,8 @@ nav {
     }
     .navigation{
         gap: 30px;
-        padding-block: 30px;
+        padding-block: 15px;
+        margin-top: 15px;
         border-top: black 1px solid;
         
        a{

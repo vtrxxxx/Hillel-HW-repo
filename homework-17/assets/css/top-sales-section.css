@@ -117,19 +117,82 @@
 }
 @media(max-width: 768px){
     .top-sales-containers-mesh{
-            grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
             
-        }
-        .top-sales-container{
-            margin-inline: auto;
-            min-width: 450px;
-        }
-        .top-sales-section{
-            height: auto;
-            padding-bottom: 20px;
-        }
-        .top-sales-heading{
-            margin-inline: auto;
-            text-align: center;
-        }
+    }
+    .top-sales-container{
+        margin-inline: auto;
+        min-width: 450px;
+    }
+    .top-sales-section{
+        height: auto;
+        padding-bottom: 20px;
+    }
+    .top-sales-heading{
+        margin-inline: auto;
+        text-align: center;
+    }
+}
+@media(max-width: 320px){
+    .top-sales-section{
+        height: auto;
+    }
+    .top-sales-heading{
+        font-size: 30px;
+        text-align: start;
+        padding-left: 12px;
+        margin-bottom: 16px;
+        height: 36px;
+    }
+    .top-sales-containers-mesh{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        column-gap: 10px;
+        row-gap: 16px;
+    }
+    .top-sales-container{
+        margin-top: 0;
+        min-width:0;
+        height: 226px;
+        grid-template-columns:1fr;
+        grid-template-rows: 108px 1fr;
+    }
+    .top-sales-container-left-icon{
+        display: block;
+        margin: auto;
+        transform: rotate(90deg);
+        width: 108px;
+    }
+
+    .top-sales-container-left{
+        width: 132px;
+        border-top-right-radius:18px;
+        border-top-left-radius:18px;
+        border-bottom-left-radius:0;
+        
+    }
+    .top-sales-container-right{
+        width: 132px;
+        border-top-right-radius:0;
+        border-top-left-radius:0;
+        border-bottom-left-radius:18px;
+        border-bottom-right-radius:18px;
+        padding-left: 16px;
+    }
+    .top-sales-container-right-author-name{
+        font-size: 16px;
+        
+    }
+    .top-sales-container-right-author{
+        margin-top: 16px;
+    }
+    .top-sales-container-right-name{
+        font-size: 20px;
+    }
+    .top-sales-container-right-price, .top-sales-container-right-price-dollar{
+        font-size: 12px;
+        max-width: 70px;
+    }
+    
+
 }

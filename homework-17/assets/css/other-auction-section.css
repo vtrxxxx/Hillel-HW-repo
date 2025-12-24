@@ -1,6 +1,7 @@
 .other-auction-section {
     max-width: 1280px;
     margin: 60px auto;
+    padding: 0 20px;
 }
 
 .other-auction-heading {
@@ -33,65 +34,71 @@
     background: var(--color-light-gray);
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .other-auction-lot-top-icon {
     width: 160px;
-    margin: 7px 68px;
+    height: 160px;
+    object-fit: contain;
 }
 
 .other-auction-lot-bot {
     background: var(--color-custom-black);
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .other-auction-lot-bot-author {
-    width: 132px;
-    height: 24px;
-    margin: 16px 0 16px 16px;
     display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.other-auction-lot-bot-author-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
 }
 
 .other-auction-lot-bot-author-name {
-    width: 100px;
     color: white;
-    margin-left: 8px;
-    margin-block: 4px;
     font-family: var(--font-muller);
     font-weight: 700;
     font-size: 16px;
     line-height: 100%;
-    letter-spacing: 0;
+    margin: 0;
 }
 
 .other-auction-lot-bot-name {
-    max-width: 250px;
     color: white;
-    margin: 16px 0 12px 16px;
     font-family: var(--font-muller);
     font-weight: 700;
     font-size: 20px;
-    line-height: 100%;
-    letter-spacing: 0;
+    line-height: 120%;
+    margin: 8px 0;
 }
 
 .other-auction-lot-bot-eth-price {
-    max-width: 120px;
     color: var(--color-aquamarine);
-    margin: 12px 0 12px 16px;
     font-family: var(--font-muller);
     font-weight: 700;
     font-size: 20px;
     line-height: 100%;
-    letter-spacing: 0;
+    margin: 8px 0;
 }
 
 .other-auction-lot-bot-time {
-    max-width: 167px;
     color: var(--color-middle-gray);
-    margin: 0 0 32px 16px;
     font-family: var(--font-muller);
+    font-size: 14px;
+    margin: 0;
 }
 
 .other-auction-button {
@@ -109,33 +116,209 @@
     letter-spacing: 0;
     text-align: center;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .other-auction-button:hover {
     background: none;
     border: solid 5px var(--color-aquamarine);
     color: var(--color-custom-black);
-    transition: background-color 0.3s ease;
 }
 
-@media(max-width: 1280px){
-    .other-auction-lots-container{
+@media(max-width: 1280px) {
+    .other-auction-lots-container {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        gap: 24px;
     }
-    .other-auction-heading{
+    
+    .other-auction-heading {
         margin-inline-start: 157px;
         margin-bottom: 10px;
     }
 }
 
-@media(max-width: 1024px){
-    .other-auction-heading{
+@media(max-width: 1024px) {
+    .other-auction-heading {
         margin-inline-start: 36px;
     }
-    .other-auction-button{
-        display: block;
+    
+    .other-auction-button {
         margin-inline: auto;
+        display: block;
+    }
+}
+
+.slider-input {
+    display: none;
+}
+
+.auction-slider {
+    position: relative;
+    max-width: 320px;
+    margin: 0 auto 40px;
+    overflow: hidden;
+    display: none; 
+}
+
+.slider-slides {
+    display: flex;
+    width: 800%; 
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider-slide {
+    width: 12.5%; 
+    flex-shrink: 0;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.slider-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.slider-prev,
+.slider-next {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--color-aquamarine);
+    border: none;
+    color: var(--color-custom-black);
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    user-select: none;
+}
+
+.slider-prev:hover,
+.slider-next:hover {
+    background-color: #1abc9c;
+}
+
+.slider-dots {
+    display: flex;
+    gap: 8px;
+}
+
+.slider-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--color-light-gray);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.slider-dot:hover {
+    background-color: var(--color-middle-gray);
+}
+
+#slide1:checked ~ .auction-slider .slider-dots .slider-dot:nth-child(1),
+#slide2:checked ~ .auction-slider .slider-dots .slider-dot:nth-child(2),
+#slide3:checked ~ .auction-slider .slider-dots .slider-dot:nth-child(3),
+#slide4:checked ~ .auction-slider .slider-dots .slider-dot:nth-child(4),
+#slide5:checked ~ .auction-slider .slider-dots .slider-dot:nth-child(5),
+#slide6:checked ~ .auction-slider .slider-dots .slider-dot:nth-child(6),
+#slide7:checked ~ .auction-slider .slider-dots .slider-dot:nth-child(7),
+#slide8:checked ~ .auction-slider .slider-dots .slider-dot:nth-child(8) {
+    background-color: var(--color-aquamarine);
+    transform: scale(1.2);
+}
+
+#slide1:checked ~ .auction-slider .slider-slides { transform: translateX(0%); }
+#slide2:checked ~ .auction-slider .slider-slides { transform: translateX(-12.5%); }
+#slide3:checked ~ .auction-slider .slider-slides { transform: translateX(-25%); }
+#slide4:checked ~ .auction-slider .slider-slides { transform: translateX(-37.5%); }
+#slide5:checked ~ .auction-slider .slider-slides { transform: translateX(-50%); }
+#slide6:checked ~ .auction-slider .slider-slides { transform: translateX(-62.5%); }
+#slide7:checked ~ .auction-slider .slider-slides { transform: translateX(-75%); }
+#slide8:checked ~ .auction-slider .slider-slides { transform: translateX(-87.5%); }
+
+.slider-controls .slider-prev::after,
+.slider-controls .slider-next::after {
+    display: none;
+}
+
+#slide1:checked ~ .auction-slider .slider-prev[for="slide8"] { display: flex; }
+#slide2:checked ~ .auction-slider .slider-prev[for="slide1"] { display: flex; }
+#slide3:checked ~ .auction-slider .slider-prev[for="slide2"] { display: flex; }
+#slide4:checked ~ .auction-slider .slider-prev[for="slide3"] { display: flex; }
+#slide5:checked ~ .auction-slider .slider-prev[for="slide4"] { display: flex; }
+#slide6:checked ~ .auction-slider .slider-prev[for="slide5"] { display: flex; }
+#slide7:checked ~ .auction-slider .slider-prev[for="slide6"] { display: flex; }
+#slide8:checked ~ .auction-slider .slider-prev[for="slide7"] { display: flex; }
+
+#slide1:checked ~ .auction-slider .slider-next[for="slide2"] { display: flex; }
+#slide2:checked ~ .auction-slider .slider-next[for="slide3"] { display: flex; }
+#slide3:checked ~ .auction-slider .slider-next[for="slide4"] { display: flex; }
+#slide4:checked ~ .auction-slider .slider-next[for="slide5"] { display: flex; }
+#slide5:checked ~ .auction-slider .slider-next[for="slide6"] { display: flex; }
+#slide6:checked ~ .auction-slider .slider-next[for="slide7"] { display: flex; }
+#slide7:checked ~ .auction-slider .slider-next[for="slide8"] { display: flex; }
+#slide8:checked ~ .auction-slider .slider-next[for="slide1"] { display: flex; }
+@media (max-width: 320px) {
+    .other-auction-section {
+        padding: 0 10px;
+        margin: 40px auto;
+        position: relative;
+    }
+    
+    .other-auction-heading {
+        font-size: 18px;
+        text-align: center;
+        margin: 0 auto 24px;
+        max-width: 100%;
+    }
+    .other-auction-lot{
+        width: 90%;
+        margin-inline:auto ;
+    }
+    
+    .other-auction-lots-container {
+        display: none !important;
+    }
+    
+    .auction-slider {
+        display: block;
+    }
+    
+    .slider-prev,
+    .slider-next {
+        display: none;
+    }
+    
+    .slider-prev {
+        left: 5px;
+    }
+    
+    .slider-next {
+        right: 5px;
+    }
+    
+    .slider-controls {
+        position: relative;
+        height: 40px;
+        margin-top: 20px;
+    }
+    
+    .other-auction-button {
+        width: 100%;
+        max-width: 280px;
+        height: 60px;
+        font-size: 18px;
+        margin: 30px auto 60px;
+        display: block;
     }
 }

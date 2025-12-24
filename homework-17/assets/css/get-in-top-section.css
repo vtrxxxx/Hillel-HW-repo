@@ -68,3 +68,8 @@
         gap: 26px;
     }
 }
+@media(max-width: 320px){
+    .get-in-top-icon img{
+        width: 296px;
+    }
+}

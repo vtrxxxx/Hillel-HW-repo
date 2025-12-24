@@ -98,3 +98,18 @@
         padding: 0;
     }
 }
+@media(max-width: 320px){
+    .new-sticker-heading{
+        font-size: 30px;
+    }
+    .new-sticker-heading::before{
+        margin-right: 5px;
+    }
+    .new-sticker-container-third{
+        display: none;
+    }
+    .new-sticker-swiper-container{
+        gap: 15px;
+        max-width: 268px;
+    }
+}

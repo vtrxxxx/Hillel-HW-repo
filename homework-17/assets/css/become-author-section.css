@@ -24,7 +24,7 @@
 
 .become-author-text-sticker {
     grid-area: sticker;
-    background-image: url('/assets/img/become-author/become-author-hands-sticker.svg');
+    background-image: url('../img/become-author/become-author-hands-sticker.svg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -158,17 +158,13 @@
 }
 
 @media (max-width: 1024px) {
-    .become-author-section {
-        flex-direction: column;
-        gap: 30px;
-        height: auto;
-    }
     
     .become-author-section {
         display: grid;
         grid-template-columns: 0.5fr 1fr;
         grid-template-rows: auto 1fr;
         gap: 30px;
+        height: auto;
     }
     
     .become-author-text {
@@ -192,9 +188,70 @@
     .become-author-text-sticker {
         height: 547px;
         grid-area: sticker;
-        background-image: url('/assets/img/become-author/become-author-hands-sticker-1024.svg');
+        background-image: url('../img/become-author/become-author-hands-sticker-1024.svg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
+    }
+}
+@media (max-width: 320px) {
+    .become-author-section {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        height: auto;
+        padding-inline:0;
+        margin-top: 70px;
+        margin-bottom: 50px;
+    }
+    .become-author-text {
+        p{
+            padding-left:12px;
+        }
+        h2{
+            padding-left:12px;
+        }
+        
+    }
+    
+    .become-author-text-sticker {
+        width: 296px;
+        height: 119px;
+        margin: 0;
+        background-image: url('../img/become-author/become-author-hands-sticker.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-inline: 4px;
+    }
+    .become-author-text-heading{
+        font-size: 30px;
+        padding-inline:12px;
+    }
+    .become-author-text-p1{
+        display: none;
+    }
+    .become-author-text-p2{
+        font-size: 16px;
+        padding-inline:12px;
+        text-align: left;
+    }
+    .become-author-text-p2-span{
+        font-size: 16px;
+    }  
+    .become-author-form-attach-works{
+        width: 282px;
+        height: 200px;
+        padding: 0;
+        margin-inline:12px;
+    }
+    .become-author-form-nickname{
+        width: 282px;
+        margin-inline:12px;
+        display: block;
+    }
+    .become-author-form-submit{
+        width: 200px;
+        margin-left: 12px;
     }
 }

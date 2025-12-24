@@ -20,10 +20,10 @@
 .newsletter-form-section-form-heading {
     max-width: 500px;
     font-family: var(--font-russo-one);
-    font-weight: 400;
+    font-weight: bold;
     font-size: 20px;
     line-height: 100%;
-    letter-spacing: 0%;
+    letter-spacing: 0;
     color: white;
     padding-top: 32px;
 }
@@ -59,7 +59,7 @@
     font-weight: 700;
     font-size: 20px;
     line-height: 100%;
-    letter-spacing: 0%;
+    letter-spacing: 0;
     color: var(--color-custom-black);
     margin-bottom: 16px;
     cursor: pointer;
@@ -100,6 +100,20 @@
     }
 
     .newsletter-form-container{
-        justify-content: center;
+        justify-content: normal;
+        padding-left: 12px;
+    }
+}
+@media (max-width: 320px){
+    .newsletter-form-section-form-heading{
+        width: 60%;
+    }
+    .newsletter-form-section-form-input{
+        width: 280px;
+        height: 50px;
+    }
+    .newsletter-form-section-form-submit{
+        width: 200px;
+        height: 50px;
     }
 }

@@ -316,6 +316,69 @@
     }
 
 }
+@media(max-width: 320px){
+    .auction-heading-h2{
+        font-size: 30px;
+        height: 36px;
+    }
+    .auction-heading-live{
+        margin: 0;
+    }
+    .auction-heading-container{
+        margin-inline-start: 11px;
+    }
+    .lot-icon{
+        max-width: 296px;
+        margin-inline: auto;
+    }
+    .lot-info-container {
+        align-items: normal;
+        padding-left: 12px;
+    }
+    .auction-lot-container, .lot-price-endtime-container{
+        align-items: normal;
+    }
+        
+
+    .auction-lot-name{
+        font-size: 30px;
+    }
+    .lot-price-container{
+        width: 70%;
+        height: 126px;
+        p{
+            font-size: 16px;
+        }
+        .lot-price-eth{
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 32px;
+        
+        }
+        .lot-price-bet-text{
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+    }
+    .lot-endtime-clock {
+        display: none;
+        margin: 0px;
+        width: 0px;
+    }
+    .lot-endtime-p-num-text, .lot-endtime-p-num-time{
+        margin-left: 16px;
+    }
+    .lot-endtime-container{
+        width: 90%;
+    }
+    .lot-button{
+        width: 85%;
+    }
+    
+}
+
+
     
 
 
