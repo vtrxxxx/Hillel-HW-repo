@@ -133,7 +133,7 @@
         text-align: center;
     }
 }
-@media(max-width: 320px){
+@media(max-width: 420px){
     .top-sales-section{
         height: auto;
     }
@@ -145,10 +145,11 @@
         height: 36px;
     }
     .top-sales-containers-mesh{
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 132px 132px;
         grid-template-rows: 1fr 1fr;
-        column-gap: 10px;
-        row-gap: 16px;
+        column-gap: 25px;
+        row-gap: 25px;
+        justify-content: center;
     }
     .top-sales-container{
         margin-top: 0;

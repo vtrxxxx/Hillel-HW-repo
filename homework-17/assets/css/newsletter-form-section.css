@@ -104,7 +104,7 @@
         padding-left: 12px;
     }
 }
-@media (max-width: 320px){
+@media (max-width: 420px){
     .newsletter-form-section-form-heading{
         width: 60%;
     }

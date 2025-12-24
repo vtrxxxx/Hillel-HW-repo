@@ -268,7 +268,7 @@
 #slide6:checked ~ .auction-slider .slider-next[for="slide7"] { display: flex; }
 #slide7:checked ~ .auction-slider .slider-next[for="slide8"] { display: flex; }
 #slide8:checked ~ .auction-slider .slider-next[for="slide1"] { display: flex; }
-@media (max-width: 320px) {
+@media (max-width: 420px) {
     .other-auction-section {
         padding: 0 10px;
         margin: 40px auto;

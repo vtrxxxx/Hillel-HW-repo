@@ -194,7 +194,7 @@
         background-size: contain;
     }
 }
-@media (max-width: 320px) {
+@media (max-width: 420px) {
     .become-author-section {
         display: flex;
         flex-direction: column;
@@ -217,12 +217,11 @@
     .become-author-text-sticker {
         width: 296px;
         height: 119px;
-        margin: 0;
         background-image: url('../img/become-author/become-author-hands-sticker.svg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
-        margin-inline: 4px;
+        margin-inline: auto;
     }
     .become-author-text-heading{
         font-size: 30px;
