@@ -81,19 +81,22 @@ const users = [
 
 // #1 Повернути масив телефонних номерів користувачів, у яких баланс менше ніж 2000 доларів.
 function ParseBallance(balance) {
-  return parseFloat(balance.replace(/[^0-9.-]+/g, ''));
+  return parseFloat(balance.replace('$', '').replace(',', ''));
 }
 
 const usersTelephone = users.filter(user => ParseBallance(user.balance) < 2000).map(user => user.phone);
 console.log(usersTelephone);
 // #2 Знайти суму всіх балансів користувачів
-const usersSum = users.reduce((total, user) => total + ParseBallance(user.balance), 0);
-console.log(Math.round(usersSum));
+const usersSum = users.reduce((total, user) => total + ParseBallance(user.balance), 0).toFixed(2);
+console.log(usersSum);
 // #3 Знайти користувача з максімальним балансом, вивести його
-const usersMaxBallance = users.sort(user => ParseBallance(user.balance)).map(user => user.name).find(user => user[0]);
-console.log(usersMaxBallance);
-// #4 ЗА БАЖАННЯМ Вивести користувачів з повторюючимися іменами
-// ЗАБОРОНЕНО КОРИСТУВАТИСЯ ФОРОМ
+const userWithMaxBalance = users.reduce((maxUser, currentUser) => {
+  return ParseBallance(currentUser.balance) > ParseBallance(maxUser.balance) 
+    ? currentUser 
+    : maxUser;
+});
+console.log(userWithMaxBalance);
+
 
 
 
