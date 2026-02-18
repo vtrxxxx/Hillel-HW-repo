@@ -1,0 +1,12 @@
+#gpsTracker{
+    display: flex;
+    height: 40px;
+    width: 120px;
+    border: 1px solid black;
+    float: right;
+    justify-content: center;
+    align-items: center;
+}
+body, html{
+    height: 100%;
+}
