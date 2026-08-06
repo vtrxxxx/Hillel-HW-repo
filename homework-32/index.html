@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <label for="searchInput">Movie Searcher</label>
+        <input type="text" id="searchInput" placeholder="Enter movie title..." autocomplete="off">
+    </div>
+    <div id="emptyInfo">
+        Please enter at least 3 characters.
+    </div>
+    <div id="error" class="hidden">Error</div>
+    <div id="loader" class="loader hidden"></div>
+    <div id="outputContainer"></div>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
