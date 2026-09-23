@@ -34,6 +34,9 @@ function scssMinimalization() {
     .pipe(dest(PATHS.projectDest))
 }
 
+function parseJS(){
+  return src('./src/script.js').pipe(dest(PATHS.projectDest));
+}
 function parseHtml() {
   return src(PATHS.htmlSource)
     .pipe(dest(PATHS.projectDest));
@@ -53,10 +56,13 @@ async function sync() {
 function watchFiles() {
   scssMinimalization()
   parseHtml()
+  parseJS()
   syncInit()
   watch(PATHS.scssSource, scssMinimalization)
   watch(PATHS.scssSource, sync)
   watch(PATHS.htmlSource, parseHtml)
+  watch(PATHS.htmlSource, parseJS)
   watch(PATHS.htmlSource, sync)
+  
 }
 task('watch', watchFiles)
