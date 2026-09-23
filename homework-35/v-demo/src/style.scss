@@ -1,0 +1,17 @@
+$background: lightcoral;
+$pDidko-border-color: darkblue;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $background;
+}
+
+.pDidko{
+  height: 350px;
+  border: 2px dashed $pDidko-border-color;
+}
