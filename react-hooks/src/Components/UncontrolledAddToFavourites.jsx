@@ -1,78 +1,81 @@
-import {useRef, useState} from 'react';
-const API_KEY = '175adc3740515fd3782e322b97fc7fc8'; 
 
+import { useRef, useState } from 'react';
 
-
-export default function UncontrolledAddToFavourites({onSearch}){
-
+export default function UncontrolledAddToFavourites({
+    onSearch,
+    validateCity
+}) {
     const cityInputRef = useRef(null);
     const [favourites, SetFavourites] = useState([]);
+    const [error, SetError] = useState('');
+    const [isChecking, SetIsChecking] = useState(false);
 
-    async function IsValid(cityName) {
-        const URL = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(cityName)}&units=metric&appid=${API_KEY}`
-        const response = await fetch(URL);
-        if(response.status === "404"){
-            return false;
-        }
-        if(!response.ok){
-            return false
-        }
-        return true
-
-    }
-
-    const  AddToFavourites = async(event) => {
+    const AddToFavourites = async (event) => {
         event.preventDefault();
 
         const cityName = cityInputRef.current.value.trim();
-        if (!cityName) {
-            return;
-        }
 
-        const alreadyExist = favourites.some((c) => c.toLowerCase() === cityName.toLowerCase());
-        
+        if (!cityName) return;
+
+        SetError('');
+
+        const alreadyExist = favourites.some(
+            c => c.toLowerCase() === cityName.toLowerCase()
+        );
 
         if (alreadyExist) {
-            throw new Error("City already in favourites");
-        }
-        const isValid = await IsValid(cityName)
-        if(!isValid){
+            SetError("City already in favourites");
             return;
         }
 
-        SetFavourites((previous) => [...previous, cityName]);
-        cityInputRef.current.value = '';
+        SetIsChecking(true);
 
-    }
+        try {
+            await validateCity(cityName);
+
+            SetFavourites(previous => [...previous, cityName]);
+            cityInputRef.current.value = '';
+        }
+        catch (error) {
+            SetError(error.message);
+        }
+        finally {
+            SetIsChecking(false);
+        }
+    };
 
     return (
-        <>
-            <div>
-                <h1>Favourites</h1>
-                <form onSubmit={AddToFavourites}>
-                    <input id="uncontroller-Favourites"
-                    placeholder="Enter city name to add to favourites: ..."
-                    name="controlledCity" 
+        <div>
+            <h1>Favourites</h1>
+
+            <form onSubmit={AddToFavourites}>
+                <input
+                    ref={cityInputRef}
+                    placeholder="Enter city name..."
                     type="text"
-                    ref={cityInputRef}/>
-                    <button type="submit">Add to Favourites</button>
-                </form>
-                <h2>Favourite cities</h2>
-                <ul>
-                    {favourites.map((c) => (
-                        <li key={c}>
-                            <button type='button' onClick={() => onSearch(c)}>
-                                {c}
-                            </button>
-                        </li>
-                    ))}
-                </ul>
-            </div>
-        </>
-    )
+                />
 
+                <button type="submit" disabled={isChecking}>
+                    {isChecking ? 'Checking...' : 'Add to Favourites'}
+                </button>
+            </form>
 
+            {error && <p>{error}</p>}
 
+            <h2>Favourite cities</h2>
 
-
+            <ul>
+                {favourites.map(c => (
+                    <li key={c}>
+                        <button
+                            type="button"
+                            onClick={() => onSearch(c)}
+                        >
+                            {c}
+                        </button>
+                    </li>
+                ))}
+            </ul>
+        </div>
+    );
 }

@@ -1,17 +1,9 @@
 
 
-export default function WeatherInfo(props) {
+export function WeatherInfo(props) {
 
-    const { weather, isLoading } = props;
+    const { weather} = props;
 
-    if (isLoading) {
-        return <>
-            Loading...
-        </>
-    }
-    if (!weather) {
-        return null;
-    }
     const icon = weather.weather[0].icon;
 
     return <>
